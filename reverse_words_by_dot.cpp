@@ -1,3 +1,26 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main() {
+    char arr[] = "I.like.this.program.very.much";
+    int i = 0;
+    int store = strlen(arr);
+    int count = 0;
+    for (int m = 0; m < strlen(arr); m++)
+        if (arr[m] == '.') count++;
+    for (int j = 0; j < count; j++) {
+        for (i = store - 1; i >= 0 && arr[i] != '.'; i--);
+        for (int k = i + 1; k < store; k++) {
+            cout << arr[k];
+        }
+        if (i >= 0) cout << ".";
+        store = i;
+    }
+    for (int k = 0; k < store; k++) cout << arr[k];
+    cout << endl;
+    return 0;
+}
+
 	// char arr[] = "I.like.this.program.very.much";
 	// int i = 0;
 	// int store = strlen(arr);
