@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 void Eratosthenes(int first, int last) {
     bool arr[100] = { 0 };
     for (int i = first; i <= last; i++) 
@@ -6,9 +8,9 @@ void Eratosthenes(int first, int last) {
                 arr[j - first] = true;        
     for (int i = 0; i <= last - first; i++)
         if (!arr[i]) cout << i + first << " ";
-    
 }
 int main(){
     int m = 2, n = 100;
-   // int* ptr = 
-   Eratosthenes(m, n);
+    Eratosthenes(m, n);
+    return 0;
+}

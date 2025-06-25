@@ -1,8 +1,10 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
 class flexibleVectors {
 private:
     double* components;
     int dimensions;
-
 public:
     // Constructor
     flexibleVectors() : components(nullptr), dimensions(0) {}
@@ -84,6 +86,7 @@ int main() {
  v1 = v2 + v3;
  cout << v1;
  cout << 3 * v4;
+ return 0;
 }
 //Assume the following input for v2 and v3
 v2= [-2 9], v3=[-9 0 7 3 4]
